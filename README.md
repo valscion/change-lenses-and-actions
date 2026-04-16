@@ -26,9 +26,9 @@ Full attribution in [`credits.md`](credits.md).
 
 ## Install
 
-### Recommended: `npx skills add`
+### Quick install with `npx skills`
 
-The fastest way to install is with the [Skills CLI](https://github.com/vercel-labs/skills). It auto-detects your coding agents and sets everything up:
+Install with a single command using the [Skills CLI](https://github.com/vercel-labs/skills). It auto-detects your coding agents and sets everything up:
 
 ```bash
 npx skills add johnpcutler/change-lenses-and-actions
@@ -44,11 +44,7 @@ npx skills add johnpcutler/change-lenses-and-actions -a claude-code -a cursor
 npx skills add johnpcutler/change-lenses-and-actions -g
 ```
 
-### Manual installation
-
-If you prefer to install manually, clone or download this repo, then follow the instructions for your tool.
-
-#### Cursor
+### Cursor
 
 Copy this folder into your skills directory:
 
@@ -62,7 +58,7 @@ cp -r . ~/.cursor/skills/com-b-diagnostic/
 
 Cursor auto-discovers `SKILL.md` from `.cursor/skills/` or `~/.cursor/skills/`. The agent will activate when you describe a stuck behavior.
 
-#### Claude Code
+### Claude Code
 
 Copy this folder into your skills directory:
 
@@ -74,15 +70,15 @@ cp -r . .claude/skills/com-b-diagnostic/
 cp -r . ~/.claude/skills/com-b-diagnostic/
 ```
 
-#### GitHub Copilot
+### GitHub Copilot
 
 Copy the contents of [`SKILL.md`](SKILL.md) into `.github/copilot-instructions.md` in your repo, or place this folder under `.github/instructions/` and reference it from there.
 
-#### Claude (claude.ai)
+### Claude (claude.ai)
 
 Create a **Project**, then upload the files from this repo as project knowledge. Paste the contents of [`SKILL.md`](SKILL.md) into the project's custom instructions.
 
-#### Other agents
+### Other agents
 
 Any agent that supports custom instructions or system prompts can use this skill. Point it at [`SKILL.md`](SKILL.md) as the orchestrator and make the `references/` files available as context.
 
